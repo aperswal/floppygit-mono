@@ -28,7 +28,7 @@
           <span>floppygit</span>
         </a>
         <nav aria-label="Primary">
-          <a href="https://github.com/aperswal/floppygit-mono">GitHub</a>
+          <a href="#how-it-works">How it works</a>
         </nav>
       </header>
 
@@ -45,9 +45,9 @@
             <code>gh</code> keep working.
           </p>
           <div class="hero-actions" id="install">
-            <a class="install" href="https://github.com/aperswal/floppygit-mono"
-              >github.com/aperswal/floppygit-mono</a
-            >
+            <a class="install" href="https://github.com/aperswal/floppygit-mono">
+              View on GitHub <span aria-hidden="true">→</span>
+            </a>
             <span class="platform">macOS · Windows · Linux</span>
           </div>
         </div>
@@ -91,6 +91,37 @@
         </div>
       </section>
 
+      <section class="steps page-width" id="how-it-works" aria-labelledby="steps-title">
+        <div class="steps-heading">
+          <h2 id="steps-title">How it works</h2>
+        </div>
+        <div class="step-grid">
+          <article>
+            <span class="step-index">01</span>
+            <h3>Make a focused commit</h3>
+            <p>
+              Start each piece with <code>floppygit new</code>, then commit one
+              small, reviewable change.
+            </p>
+          </article>
+          <article>
+            <span class="step-index">02</span>
+            <h3>Push the stack</h3>
+            <p>
+              Run <code>floppygit push</code> to open one pull request per
+              commit, each based on the one below it.
+            </p>
+          </article>
+          <article>
+            <span class="step-index">03</span>
+            <h3>Review from the bottom</h3>
+            <p>
+              The first pull request merges first. Then
+              <code>floppygit sync</code> moves the remaining stack forward.
+            </p>
+          </article>
+        </div>
+      </section>
 
       <footer class="footer page-width">
         <span></span>
