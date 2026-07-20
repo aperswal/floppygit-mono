@@ -1,0 +1,23 @@
+version: 2
+
+# Release assets follow goreleaser's default name template,
+# floppygit_<version>_<os>_<arch>.<ext> - the exact names SETUP.md's install
+# commands download. tar.gz everywhere, zip on Windows.
+project_name: floppygit
+
+builds:
+  - id: floppygit
+    main: ./cmd/floppygit
+    binary: floppygit
+    env: [CGO_ENABLED=0]
+    goos: [darwin, linux, windows]
+    goarch: [amd64, arm64]
+
+archives:
+  - formats: [tar.gz]
+    format_overrides:
+      - goos: windows
+        formats: [zip]
+
+changelog:
+  use: github-native

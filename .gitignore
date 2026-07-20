@@ -1,0 +1,30 @@
+# Go build and test output
+/floppygit
+*.test
+*.out
+coverage.out
+
+# goreleaser
+/dist/
+
+# Wrangler / Cloudflare (the site worker)
+.wrangler/
+workers/.wrangler/
+
+# Terraform local state and provider cache (see workers/wrangler.jsonc:
+# terraform was evaluated and has zero resources to manage)
+.terraform/
+*.tfstate
+*.tfstate.*
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+.dev.vars
+.dev.vars.*
+
+# Editors and operating systems
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>floppygit · Git remade for agents</title>
+    <meta
+      name="description"
+      content="floppygit is a CLI that wraps git for agentic coding. Features ship as a stack of commits, each one its own pull request, so review starts while the agent keeps building."
+    />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="/styles.css" />
+    <meta property="og:title" content="floppygit · Git remade for agents" />
+    <meta
+      property="og:description"
+      content="A CLI that wraps git for agentic coding. Each commit is its own pull request, and review starts at the bottom while new work lands on top."
+    />
+    <meta property="og:type" content="website" />
+  </head>
+  <body>
+    <main>
+      <header class="nav page-width">
+        <a class="logo" href="/">
+          <img class="logo-mark" src="/logo.png" alt="floppygit" width="30" height="30" />
+          <span>floppygit</span>
+        </a>
+        <nav aria-label="Primary">
+          <a href="https://github.com/aperswal/floppygit-mono">GitHub</a>
+        </nav>
+      </header>
+
+      <section class="hero page-width">
+        <div class="hero-copy">
+          <h1>
+            Git remade for agents
+            <span class="hero-sub">(and better commits)</span>
+          </h1>
+          <p class="hero-description">
+            A CLI that wraps git for agentic coding. Features ship as a stack of
+            commits, each one its own pull request, so review starts at the
+            bottom while the agent keeps building on top. Your hooks and
+            <code>gh</code> keep working.
+          </p>
+          <div class="hero-actions" id="install">
+            <a class="install" href="https://github.com/aperswal/floppygit-mono"
+              >github.com/aperswal/floppygit-mono</a
+            >
+            <span class="platform">macOS · Windows · Linux</span>
+          </div>
+        </div>
+
+        <div class="stack-card" aria-label="A stack of pull requests merging bottom to top">
+          <div class="stack-card-header">
+            <img class="bot-mark" src="/logo.png" alt="" width="26" height="26" />
+            <div>
+              <strong>floppygit push</strong>
+              <span>3 stacked pull requests</span>
+            </div>
+            <span class="status status-armed">auto-merge</span>
+          </div>
+          <ul class="stack" aria-hidden="true">
+            <li class="pr">
+              <span class="dot"></span>
+              <span class="check">✓</span>
+              <span class="pr-body">
+                <span class="pr-branch">#3 usage-meter-ui</span>
+                <span class="pr-base">base: usage-meter-api</span>
+              </span>
+            </li>
+            <li class="pr">
+              <span class="dot"></span>
+              <span class="check">✓</span>
+              <span class="pr-body">
+                <span class="pr-branch">#2 usage-meter-api</span>
+                <span class="pr-base">base: metering-table</span>
+              </span>
+            </li>
+            <li class="pr bottom">
+              <span class="dot"></span>
+              <span class="check">✓</span>
+              <span class="pr-body">
+                <span class="pr-branch">#1 metering-table</span>
+                <span class="pr-base">base: main · armed</span>
+              </span>
+            </li>
+          </ul>
+          <div class="stack-foot">The bottom PR merges first, and the stack follows.</div>
+        </div>
+      </section>
+
+
+      <footer class="footer page-width">
+        <span></span>
+        <span class="year">© 2026</span>
+      </footer>
+    </main>
+  </body>
+</html>

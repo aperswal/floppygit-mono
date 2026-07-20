@@ -1,0 +1,28 @@
+{
+  // floppygit.com — the marketing site, served straight from ../site as static
+  // assets with no Worker script. `wrangler deploy` uploads the directory and
+  // Cloudflare serves it from the edge.
+  //
+  // Infrastructure note (owner's "terraform if any necessary"): terraform was
+  // evaluated and there is nothing for it to manage. The only cloud resource is
+  // this Worker plus the custom-domain binding below, and wrangler both creates
+  // the Worker and, for a domain on this Cloudflare account, auto-creates and
+  // maintains the DNS records for the custom domain. There is no database, no
+  // queue, no bucket, no secret — zero resources left over for terraform, so no
+  // terraform is committed. Deploy is a single `wrangler deploy` from this dir.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "floppygit-site",
+  "compatibility_date": "2026-07-19",
+  "assets": {
+    "directory": "../site"
+  },
+  // Custom domains. wrangler creates the DNS records automatically when the zone
+  // is on this Cloudflare account; that is the "zero resources for terraform".
+  "routes": [
+    { "pattern": "floppygit.com", "custom_domain": true },
+    { "pattern": "www.floppygit.com", "custom_domain": true }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}
